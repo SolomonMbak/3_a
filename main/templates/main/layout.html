@@ -1,0 +1,57 @@
+<head>
+        {% load static %}
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="{% static 'tinymce/css/prism.css' %}" rel="stylesheet">
+        <link href="{% static 'css/materialize.css' %}" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.min.css' %}" media="screen, projection">
+        <link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}" media="screen, projection">
+        <link rel="shortcut icon" type="image/png" href="{% static 'imgs/ico/360academia_solid_favicon.png' %}">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0"/>
+        <!-- add fontawesome src tag -->
+        <title>360academia | Free Learning!</title>
+</head>
+<body>
+        {% include 'main/includes/navbar.html' %}
+        {% include 'main/includes/messages.html' %}
+<div class="container">
+{% block content %}
+        
+{% endblock %}
+ </div>       
+</body>
+<footer class="page-footer blue darken-3">
+        <div class="container">
+                <div class="row">
+                        <div class="col l6 s12">
+                                <img src="{% static 'imgs/ico/360academia_white.png' %}" alt="360academia" style="width: 20%">
+                                <h5 class="white-text">360academia</h5>
+                                <p class="grey-text text-lighten-4">Learn at your convinience.</p>
+                        </div>
+                        <div class="col l4 offset-l2 s12">
+                                <h5 class="white-text">Links</h5>
+                                <ul>
+                                        <li><a class="grey-text text-lighten-3" href="/contact/">Contact Us</a></li>
+                                        <li><a class="grey-text text-lighten-3" href="/publish_a_course/">Publish a Course</a></li>
+                                        <li><a class="grey-text text-lighten-3" href="/about/">About Us</a></li>
+                                        <li><a class="grey-text text-lighten-3" href="/privacy_policy/">Privacy Policy</a></li>
+                                        <li><a class="grey-text text-lighten-3" href="/terms/">Terms of Use</a></li>
+                                        
+                                        
+                                </ul>
+                        </div>
+                </div>
+        </div>
+        <div class="footer-copyright">
+                <div class="container">
+                        &copy; <script>
+                                document.write(new Date().getFullYear());
+                        </script> | <a href="https://www.360academia.com">360academia</a> by GOJEMS | All rights
+                                reserved.
+                </div>
+        </div>
+</footer>
+<script src="{% static 'tinymce/js/prism.js' %}"></script>
+<script src="{% static 'js/materialize.js' %}"></script>
+<script src="{% static 'js/materialize.min.js' %}"></script>
+<script src="{% static 'js/init.js' %}"></script>
+<script>M.AutoInit();</script>

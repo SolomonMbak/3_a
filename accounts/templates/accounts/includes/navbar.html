@@ -1,0 +1,59 @@
+
+<nav class="blue darken-3">
+<div class="container nav-fixed">
+    <div class="nav-wrapper"><a href="/" class="brand-logo">360academia</a><a href="#" data-target="mobile-demo"
+            class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="/">Home</a></li>
+
+            {% if user.is_authenticated %}
+            
+            <li><a href="/accounts/account/">{{user.username}}</a></li>
+            <!-- <li><a href="/accounts/change_password/">Change Password</a></li> -->
+            <li><a href="/accounts/logout/">Logout</a></li>
+
+            {% else %}
+            <li><a href="/accounts/contact/">Contact Us</a></li>
+            <li><a href="/accounts/register/">Register</a></li>
+            <li><a href="/accounts/login/">Login</a></li>
+            {% endif %}
+        </ul>
+    </div>
+</div>
+</nav>
+<ul class="sidenav" id="mobile-demo">
+    <li><a href="/">Home</a></li>
+
+    {% if user.is_authenticated %}
+    <li><a href="#">{{user.firstname}}</a></li>
+    <li><a href="/accounts/logout/">Logout</a></li>
+
+    {% else %}
+    <li><a href="/accounts/contact/">Contact Us</a></li>
+    <li><a href="/accounts/register/">Register</a></li>
+    <li><a href="/accounts/login/">Login</a></li>
+    {% endif %}
+</ul>
+
+
+
+<!-- <div class="nav-fixed">
+    <nav >
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="/" class="brand-logo">360academia</a>
+                <a href="#" data-target="nav-mobile" class="top-nav sidenav-trigger waves-effect waves-light circle hide-on-large-only">
+                    <i class="material-icons">menu</i>
+                </a>
+
+                <ul class="right hide-on-med-and-down">
+                    
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</div>
+<ul class="sidenav" id="nav-mobile">
+    
+</ul> -->

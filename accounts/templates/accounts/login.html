@@ -1,0 +1,18 @@
+{% extends 'accounts/layout.html' %}
+
+{% block content %}
+<br>
+<br>
+    <form method="POST" action="">
+            {% csrf_token %}
+            {{form.as_p}}
+            <br> <center>
+            <button class="btn blue darken-3">Login</button>
+    </form>
+    <div class="text-center">
+            <a href="/accounts/register">Create an Account</a> if you DON'T already have an account.
+            <a href="{% url 'password_reset' %}">Forgot Password?</a>
+    </div></center>
+<br>
+
+{% endblock %}

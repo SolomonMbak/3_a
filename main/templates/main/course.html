@@ -1,0 +1,45 @@
+{% extends 'main/layout.html' %}
+
+{% block content %}
+
+<div class="row">
+        <div class="col s12 m8 l8">
+                <div>
+                        <h3>{{the_course.course_title}}</h3>
+                        <p><i>This should take approximatetly <strong>{{the_course.course_duration}} minutes</strong></i></p>
+                        <hr>
+                </div>
+                        <br>
+                        <p>{{the_course.course_contents|safe}}</p>
+        </div>
+
+        <div class="col s12 m4 l4">
+                <div class="collapsible popout">
+                        {% for the_course in sidebar %}
+                                {% if forloop.counter0 == this_course_idx %}
+                                <li class="active">
+                                        <div class="collapsible-header">{{the_course.course_title}} <br>(Currently Viewing)</br></div>
+                                </li>
+                                {% else %}
+                                <li>
+                                        <div class="collapsible-header">
+                                                {{the_course.course_title}}
+                                        </div>
+                                        <div class="collapsible-body">
+                                                <p>
+                                                        <center>
+                                                                <a href="/{{the_course.course_slug}} ">
+                                                                        <button class="btn wave-effect wave-light right-align blue darken-3">Open</button>
+                                                                </a>
+                                                        </center>
+                                                </p>
+                                        </div>
+                                </li>
+                                {% endif %}
+                        {% endfor %}
+                </div>
+        </div>
+</div>
+
+{% endblock %}
+

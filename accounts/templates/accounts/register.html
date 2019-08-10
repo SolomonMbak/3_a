@@ -1,0 +1,20 @@
+{% extends 'accounts/layout.html' %}
+
+{% block content %}
+<br>
+<br>
+<center><div class="container"><h3>User Registration Form</h3></div></center>
+<hr> <br>
+    <form method="POST" action="">
+            {% csrf_token %}
+            {{form.as_p}}
+            <br>
+            <center><button class="btn blue darken-3">Create my Account</button>
+    </form>
+    <div class="text-center">
+            <a class="d-block small mt-3" href="/login">Login</a> if you already have an account.
+            <!-- <a class="d-block small" href="forgot-password.html">Forgot Password?</a> -->
+    </div></center>
+<br>
+
+{% endblock %}

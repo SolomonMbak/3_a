@@ -1,0 +1,24 @@
+{% extends 'main/layout.html' %}
+
+{% block content %}
+<div class="container"> 
+<div>
+
+  {% if message.tags == 'info' %}
+  <script>
+      M.toast({
+          html: "{{message}}",
+          classes: 'blue rounded',
+          displayLength: 5000
+      });
+  </script>
+  {% endif %}
+</div>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <center><button class="btn blue darken-3">SEND MESSAGE</button></center>
+</form>
+</div>
+{% endblock %}
