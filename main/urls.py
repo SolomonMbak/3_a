@@ -7,6 +7,7 @@ app_name = "main"
 urlpatterns = [
     path("", views.index, name="index"),
     path("about/", views.about, name="about"),
+    path("our_courses/", views.our_courses, name="our_courses"),
     path("<single_slug>", views.single_slug, name="single_slug"),
     path("privacy_policy/", views.privacy_policy, name="privacy_policy"),
     path("terms/", views.terms, name="terms"),
