@@ -42,6 +42,10 @@ def index(request):
     return render(request=request, template_name='main/course_cat.html', context={"course_cat": course_category.objects.all})
 
 
+def our_courses(request):
+    return render(request=request, template_name='main/our_courses.html', context={"cours_cat": course_category.objects.all})
+
+
 def about(request):
     return render(request, "main/about.html")
 
