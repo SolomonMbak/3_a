@@ -8,7 +8,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '#ou=y8g*mfz2gj^c7pfj6&-m%^l295+==mfur-=6r&^hv558zp'
+SECRET_KEY = '%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -62,9 +62,6 @@ INSTALLED_APPS = [
 ]
 
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -111,18 +108,6 @@ DATABASES = {
     }
 }
 
-# deplyment
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'db_360academia',
-#         'USER': 'root',
-#         'PASSWORD': '360@academia.password',
-#         'HOST': 'gojems-360academia:us-central1:gojemssys',
-#     }
-# }
-
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -168,3 +153,12 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, '/images/')
 MEDIA_URL = '/images/'
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = '$$$$$$$$$$$$$$$$$$'
+EMAIL_HOST_PASSWORD = '%%%%%%%%%%%%%%%%%%%%'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'Team 360academia <noreply@360academia.com>'
