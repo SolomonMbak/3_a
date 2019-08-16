@@ -1,6 +1,45 @@
 {% extends 'main/layout.html' %}
 
 {% block content %}
+{% load static %}
+        <!-- SECTION: SLIDER -->
+        <div class="section no-pad-bot blue lighten-4" id="index-banner">
+                <div class="container">
+                        <br><br>
+                        <h1 class="header center  blue-text text-darken-3">Welcome to 360academia</h1>
+                        <div class="row center">
+                                <h5 class="header col s12 light">The free, easy to navigate, convenient and light-weight
+                                        learning plateform.</h5>
+                        </div>
+                        <div class="row center">
+                                <a href="/accounts/login/" class="btn-large waves-effect waves-light blue darken-3">Jump right in</a>
+                        </div>
+                        <br><br>
+
+                </div>
+        </div>
+
+        <div class="section no-pad-bot blue darken-3" id="index-banner">
+                <div class="container">
+                        <br><br>
+                        <h4 class="header center  white-text text-darken-3">It's as simple as ABC!</h4>
+                        <div class="row center">
+                                <h5>Scroll down to see our courses <strong>></strong> pick
+                                        a course you like
+                                        <strong>></strong> start studying!</h5>
+                                <p class="white-text text-darken-4"><strong>Easy Peasy!</strong></p>
+                        </div>
+                        <br>
+                </div>
+        </div>
+<div class="section no-pad-bot blue lighten-4" id="index-banner">
+                <div class="container">
+                        <br><br>
+                        <h4 class="header center  blue-text text-darken-3">OUR COURSES</h4>
+                        <br>
+                </div>
+</div>
+<div class="container">
 <br>
 {% for c_cat in course_cat %}
 <div class="row">
@@ -17,6 +56,47 @@
         </div>
         </strong>
 </div>
+</div>
  {% endfor %}
+ <br>
+<hr>
+<div class="container">
+        <div class="section">
+                <!--   Icon Section   -->
+                <div class="row">
+                        <div class="col s12 m4">
+                                <div class="icon-block">
+                                        <h2 class="center light-blue-text"><i class="fa fa-connectdevelop"></i></h2>
+                                        <h5 class="center">24/7 service</h5>
 
+                                        <p class="light">Our services are available for 24 hours everday and seven
+                                                days of every week. No downtime!
+                                                
+                                        </p>
+                                </div>
+                        </div>
+
+                        <div class="col s12 m4">
+                                <div class="icon-block">
+                                        <h2 class="center light-blue-text"><i class="fa fa-user-plus"></i></h2>
+                                        <h5 class="center">Learning Freedom!</h5>
+                                        <p class="light">You can learn <i> when ever, however,
+                                                        where ever and with whom so ever</i> you like!</p>
+                                </div>
+                        </div>
+
+                        <div class="col s12 m4">
+                                <div class="icon-block">
+                                        <h2 class="center"><i class="fa fa-cogs"></i></h2>
+                                        <h5 class="center">Premium Courses</h5>
+
+                                        <p class="light">Yes we have premium courses. They are also absolutely free to learn! You only pay to be certified.
+                                        </p>
+                                </div>
+                        </div>
+                </div>
+
+        </div>
+        <br><br>
+</div>
 {% endblock %}
